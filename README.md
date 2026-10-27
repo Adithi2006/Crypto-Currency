@@ -1,86 +1,111 @@
-🚀 ADITHI (ADI)
 
-Your Digital Future. Powered by ADITHI.
+# 🚀 ADITHI (ADI)
 
-ADITHI is a Polygon-based ERC-20 token project featuring a modern Web3 decentralized application (DApp) for token balances, wallet connectivity, transfers, and transaction tracking.
+### Your Digital Future. Powered by ADITHI.
 
-✨ Features
-🪙 ADI Token — ERC-20 token with a fixed initial supply of 1,000,000 ADI.
-🔗 Polygon Network — Designed for Polygon PoS.
-👛 Wallet Connectivity — Connect compatible wallets such as MetaMask.
-💸 Token Transfers — Send ADI between wallet addresses.
-🔐 Spending Approvals — Approve and manage token allowances.
-📊 Transaction Tracking — View transaction status and blockchain explorer links.
-🎨 Modern UI — Responsive interface with vibrant gradients and a Web3-inspired design.
-🛠️ Tech Stack
-Solidity
-OpenZeppelin ERC-20
-React
-TypeScript
-Tailwind CSS
-ethers.js
-Remix IDE
-🪙 Token Information
-Property	Value
-Token Name	Adithi
-Symbol	ADI
-Blockchain	Polygon PoS
-Standard	ERC-20
-Initial Supply	1,000,000 ADI
-Decimals	18
-Minting	No additional mint function
-🚀 Smart Contract Deployment
-Open Remix IDE.
-Create Adithi.sol and add the Solidity contract source.
-Compile using Solidity 0.8.20 or a compatible 0.8.x compiler.
-Deploy to Polygon Amoy testnet first.
-Test balances, transfers, and approvals.
-Deploy to Polygon Mainnet only after successful testing.
+A modern Polygon-based cryptocurrency project featuring the **Adithi (ADI)** ERC-20 token and a beautiful Web3 decentralized application.
 
-Networks
+![Solidity](https://img.shields.io/badge/Solidity-0.8.20-363636?logo=solidity)
+![Blockchain](https://img.shields.io/badge/Blockchain-Polygon-8247E5)
+![Standard](https://img.shields.io/badge/Standard-ERC--20-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Polygon Amoy Testnet — Chain ID: 80002
-Polygon Mainnet — Chain ID: 137
-⚙️ Frontend Setup
+---
+
+## ✨ Features
+
+- 🪙 **ADI Token:** Fixed initial supply of 1,000,000 ADI.
+- 🔗 **Polygon Blockchain:** Built for Polygon PoS.
+- 👛 **Wallet Connection:** Connect compatible Web3 wallets.
+- 💸 **Token Transfers:** Send ADI between wallets.
+- 🔐 **Spending Approvals:** Manage ERC-20 allowances.
+- 📊 **Transaction Tracking:** View transaction details and status.
+- 🎨 **Modern UI:** Colorful gradients and a responsive Web3 dashboard.
+
+## 🪙 Token Information
+
+| Property | Details |
+|---|---|
+| Token Name | Adithi |
+| Symbol | ADI |
+| Blockchain | Polygon PoS |
+| Token Standard | ERC-20 |
+| Initial Supply | 1,000,000 ADI |
+| Decimals | 18 |
+| Additional Minting | Not supported by the contract |
+
+## 🛠️ Tech Stack
+
+- Solidity
+- OpenZeppelin
+- React
+- TypeScript
+- Tailwind CSS
+- ethers.js
+- Remix IDE
+
+## 🚀 Smart Contract Deployment
+
+1. Open [Remix IDE](https://remix.ethereum.org/).
+2. Create `Adithi.sol` and paste the smart contract code.
+3. Compile using a compatible Solidity compiler.
+4. Deploy to Polygon Amoy testnet first.
+5. Test transfers, balances, and approvals.
+6. Deploy to Polygon Mainnet after testing.
+
+### Supported Networks
+
+| Network | Chain ID |
+|---|---:|
+| Polygon Amoy Testnet | 80002 |
+| Polygon Mainnet | 137 |
+
+## ⚙️ Frontend Installation
 
 Clone the repository:
 
-bash
-git clone <YOUR_REPOSITORY_URL>
-cd <YOUR_PROJECT_FOLDER>
-
+```bash
+git clone YOUR_REPOSITORY_URL
+cd YOUR_PROJECT_FOLDER
+```
 
 Install dependencies:
 
-bash
+```bash
 npm install
+```
 
+Create a `.env` file in the project root:
 
-Configure your deployed contract address in the environment file if your frontend supports it:
-
-env
+```env
 VITE_ADITHI_CONTRACT_ADDRESS=YOUR_DEPLOYED_CONTRACT_ADDRESS
-
+```
 
 Start the development server:
 
-bash
+```bash
 npm run dev
+```
 
+Replace the placeholder values with your actual repository URL, project folder, and deployed contract address.
 
-Follow the setup instructions provided by your project's framework if the scripts differ.
+## 🔒 Security
 
-🔒 Security
-Never share your wallet's private key or recovery phrase.
-Verify the token contract address and network before transactions.
-Test on Polygon Amoy before deploying to Mainnet.
-Review the smart contract and frontend integrations before handling real funds.
-⚠️ Disclaimer
+- Never share your wallet's private key or recovery phrase.
+- Verify the contract address and blockchain network before transactions.
+- Test the contract on Polygon Amoy before using Mainnet.
+- Review the smart contract before handling real funds.
 
-ADITHI is a cryptocurrency token project provided for development and educational purposes. Digital assets involve risk. No token price, liquidity, exchange listing, or financial return is guaranteed.
+## ⚠️ Disclaimer
 
-📄 License
+ADITHI is a cryptocurrency development project. Digital assets involve risk. No token price, liquidity, exchange listing, or financial return is guaranteed.
 
-This project uses the MIT license for the smart contract source. Ensure the repository's license accurately covers all included frontend code and assets before publishing.
+## 📄 License
 
-Built with 💜 for the Web3 ecosystem.
+The smart contract source uses the MIT license identifier. Ensure the repository's license accurately covers all included code and assets.
+
+---
+
+<p align="center">
+  <b>💜 Built with passion for the Web3 ecosystem.</b>
+</p>
