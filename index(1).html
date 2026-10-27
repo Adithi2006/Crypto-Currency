@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://app.remix.live/plugins/doc-viewer/index.html -->
+<html lang="en" style="--theme: dark; --brightness: dark;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./remix-dark_tvx1s2.css">
+    
+    <title>Doc Viewer</title>
+    <!--<base href="./">--><base href=".">    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://app.remix.live/plugins/doc-viewer/favicon.ico">
+  <link rel="stylesheet" href="./main(1).css"></head>
+  <body>
+    <div id="root"><div class="p-3 bg-body text-body" data-theme="dark"><button class="btn btn-sm border mb-2">EDIT</button><div class="aiMarkup lh-base text-wrap d-flex flex-column gap-2"><h1 class="ai-heading ai-h1 mb-1" level="1">Adithi — QuickDApp Documentation</h1>
+<h2 class="ai-heading ai-h2 mb-1" level="2">Overview</h2>
+<p class="ai-paragraph">Adithi is a contract-backed DApp generated with QuickDapp. It is bound to an ERC20 token contract deployed on the Remix VM (in-browser blockchain). The DApp provides a frontend interface for interacting with the contract's token functionality.</p>
+<h2 class="ai-heading ai-h2 mb-1" level="2">Current Environment</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ai-table-wrapper"><table class="ai-table"><thead class="ai-table-head"><tr class="ai-table-row"><th class="ai-table-header-cell">Property</th><th class="ai-table-header-cell">Value</th></tr></thead><tbody class="ai-table-body"><tr class="ai-table-row"><td class="ai-table-cell">QuickDApp Preview</td><td class="ai-table-cell">Available (Remix VM provider bridge)</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Contract network</td><td class="ai-table-cell">Remix VM (<code class="ai-inline-code">vm-osaka</code>)</td></tr><tr class="ai-table-row"><td class="ai-table-cell">External website URL</td><td class="ai-table-cell">Not available (DApp not deployed to IPFS/gateway)</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Reachable outside Remix IDE</td><td class="ai-table-cell">No — Remix VM is an in-browser blockchain; the contract and DApp are only accessible within Remix IDE via the QuickDapp Preview</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Gateway URL</td><td class="ai-table-cell">Not deployed</td></tr></tbody></table></div>
+<h2 class="ai-heading ai-h2 mb-1" level="2">How to Use</h2>
+<ol class="ai-list ai-list-ordered" depth="0">
+<li class="ai-list-item" index="0"><strong class="ai-strong">Open the DApp in QuickDapp Preview</strong> — Use the QuickDapp Preview panel within Remix IDE to load the Adithi DApp.</li>
+<li class="ai-list-item" index="1"><strong class="ai-strong">View token info</strong> — Read-only functions (<code class="ai-inline-code">name</code>, <code class="ai-inline-code">symbol</code>, <code class="ai-inline-code">decimals</code>, <code class="ai-inline-code">totalSupply</code>) display token metadata. Use <code class="ai-inline-code">balanceOf</code> with an address to check token balances.</li>
+<li class="ai-list-item" index="2"><strong class="ai-strong">Transfer tokens</strong> — Use the <code class="ai-inline-code">transfer</code> function to send tokens from your account to another address.</li>
+<li class="ai-list-item" index="3"><strong class="ai-strong">Approve spending</strong> — Use <code class="ai-inline-code">approve</code> to authorize a spender address to transfer tokens on your behalf.</li>
+<li class="ai-list-item" index="4"><strong class="ai-strong">Transfer on behalf</strong> — Use <code class="ai-inline-code">transferFrom</code> to move tokens between addresses if you have sufficient allowance.</li>
+<li class="ai-list-item" index="5"><strong class="ai-strong">Check allowance</strong> — Use <code class="ai-inline-code">allowance</code> to verify how much a spender is authorized to spend.</li>
+</ol>
+<blockquote class="ai-blockquote">
+<p class="ai-paragraph"><strong class="ai-strong">Note:</strong> Because the contract runs on Remix VM, all interactions occur within the Remix IDE environment. The DApp cannot be accessed by external wallets or published as a public DApp in its current state.</p>
+</blockquote>
+<h2 class="ai-heading ai-h2 mb-1" level="2">Features and Contract Coverage</h2>
+<blockquote class="ai-blockquote">
+<p class="ai-paragraph">Static source reference scan only; this does not verify runtime behavior or transaction success. "Not found" means the scan found no supported call pattern — it does not prove the feature is unsupported.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ai-table-wrapper"><table class="ai-table"><thead class="ai-table-head"><tr class="ai-table-row"><th class="ai-table-header-cell">User Action</th><th class="ai-table-header-cell">Contract Function</th><th class="ai-table-header-cell">Transaction Type</th><th class="ai-table-header-cell">UI/Source Evidence</th><th class="ai-table-header-cell">Coverage Status</th></tr></thead><tbody class="ai-table-body"><tr class="ai-table-row"><td class="ai-table-cell">Approve a spender</td><td class="ai-table-cell"><code class="ai-inline-code">approve(address,uint256)</code></td><td class="ai-table-cell">State-changing transaction</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Transfer tokens</td><td class="ai-table-cell"><code class="ai-inline-code">transfer(address,uint256)</code></td><td class="ai-table-cell">State-changing transaction</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Transfer tokens on behalf</td><td class="ai-table-cell"><code class="ai-inline-code">transferFrom(address,address,uint256)</code></td><td class="ai-table-cell">State-changing transaction</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Check allowance</td><td class="ai-table-cell"><code class="ai-inline-code">allowance(address,address)</code></td><td class="ai-table-cell">Read only</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Check token balance</td><td class="ai-table-cell"><code class="ai-inline-code">balanceOf(address)</code></td><td class="ai-table-cell">Read only</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Get token decimals</td><td class="ai-table-cell"><code class="ai-inline-code">decimals()</code></td><td class="ai-table-cell">Read only</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Get token name</td><td class="ai-table-cell"><code class="ai-inline-code">name()</code></td><td class="ai-table-cell">Read only</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Get token symbol</td><td class="ai-table-cell"><code class="ai-inline-code">symbol()</code></td><td class="ai-table-cell">Read only</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr><tr class="ai-table-row"><td class="ai-table-cell">Get total supply</td><td class="ai-table-cell"><code class="ai-inline-code">totalSupply()</code></td><td class="ai-table-cell">Read only</td><td class="ai-table-cell">Not found</td><td class="ai-table-cell">Not found</td></tr></tbody></table></div>
+<h2 class="ai-heading ai-h2 mb-1" level="2">Project Files</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ai-table-wrapper"><table class="ai-table"><thead class="ai-table-head"><tr class="ai-table-row"><th class="ai-table-header-cell">File</th><th class="ai-table-header-cell">Description</th></tr></thead><tbody class="ai-table-body"><tr class="ai-table-row"><td class="ai-table-cell"><code class="ai-inline-code">dapp.config.json</code></td><td class="ai-table-cell">QuickDapp-managed configuration file containing contract bindings, ABI, and DApp metadata. <strong class="ai-strong">Do not edit manually.</strong></td></tr><tr class="ai-table-row"><td class="ai-table-cell"><code class="ai-inline-code">.deps/remix-tests/remix_tests.sol</code></td><td class="ai-table-cell">Remix test assertion library used for contract testing.</td></tr><tr class="ai-table-row"><td class="ai-table-cell"><code class="ai-inline-code">.deps/remix-tests/remix_accounts.sol</code></td><td class="ai-table-cell">Remix test accounts library providing predefined test addresses.</td></tr></tbody></table></div>
+<h2 class="ai-heading ai-h2 mb-1" level="2">Limitations</h2>
+<ul class="ai-list ai-list-unordered" depth="0">
+<li class="ai-list-item" index="0"><strong class="ai-strong">Remix VM only:</strong> The contract is deployed on Remix VM (<code class="ai-inline-code">vm-osaka</code>), an in-browser blockchain. It is not reachable outside Remix IDE, and the DApp cannot be published as a working public DApp in its current state.</li>
+<li class="ai-list-item" index="1"><strong class="ai-strong">No external gateway:</strong> The DApp has not been deployed to IPFS and has no gateway URL, so there is no external website available.</li>
+<li class="ai-list-item" index="2"><strong class="ai-strong">Contract coverage not verified:</strong> No frontend call references were found for any ABI functions. This does not mean the features are unsupported, only that the static source scan did not detect supported call patterns.</li>
+<li class="ai-list-item" index="3"><strong class="ai-strong">Contract source not configured:</strong> The contract source path is not configured, so implementation details such as access control, modifiers, and internal validation cannot be documented from source.</li>
+<li class="ai-list-item" index="4"><strong class="ai-strong">No description configured:</strong> The DApp description metadata is not configured.</li>
+</ul>
+<h2 class="ai-heading ai-h2 mb-1" level="2">Safe Updates</h2>
+<ul class="ai-list ai-list-unordered" depth="0">
+<li class="ai-list-item" index="0"><strong class="ai-strong">Frontend updates:</strong> Use the QuickDapp "Ask AI to Update" feature to modify the frontend source files. Do not edit <code class="ai-inline-code">dapp.config.json</code> manually.</li>
+<li class="ai-list-item" index="1"><strong class="ai-strong">Contract binding restrictions:</strong> Contract address, ABI, or network binding changes are outside normal frontend updates. To add or replace a contract binding, use the QuickDapp update modal and confirm the change in the UI.</li>
+<li class="ai-list-item" index="2"><strong class="ai-strong">Contract source:</strong> The contract source path is not configured. Without source access, implementation behavior cannot be inferred from the ABI alone.</li>
+</ul></div></div></div>
+  <script src="./runtime(1).js.download" type="module"></script><script src="./vendor(1).js.download" type="module"></script><script src="./main(1).js.download" type="module"></script>
+
+</body></html>

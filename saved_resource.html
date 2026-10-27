@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://app.remix.live/? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADITHI — Your Digital Future</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./css2(1)" rel="stylesheet">
+  <script src="./saved_resource"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            adi: {
+              bg: '#090B1A',
+              surface: '#11132A',
+              violet: '#7C3AED',
+              blue: '#3B82F6',
+              cyan: '#06B6D4',
+            }
+          },
+          animation: {
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'float-medium': 'floatMedium 4s ease-in-out infinite',
+            'spin-slow': 'spin 20s linear infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'particle': 'particle 8s linear infinite',
+          },
+          keyframes: {
+            floatSlow: {
+              '0%,100%': { transform: 'translateY(0) rotate(0deg)' },
+              '50%': { transform: 'translateY(-20px) rotate(3deg)' },
+            },
+            floatMedium: {
+              '0%,100%': { transform: 'translateY(0) rotate(0deg)' },
+              '50%': { transform: 'translateY(-12px) rotate(-2deg)' },
+            },
+            pulseGlow: {
+              '0%,100%': { boxShadow: '0 0 20px rgba(124,58,237,0.4), 0 0 40px rgba(59,130,246,0.2)' },
+              '50%': { boxShadow: '0 0 35px rgba(124,58,237,0.6), 0 0 60px rgba(59,130,246,0.3)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            particle: {
+              '0%': { transform: 'translate(0,0) scale(1)', opacity: '0.6' },
+              '50%': { transform: 'translate(30px,-50px) scale(1.5)', opacity: '1' },
+              '100%': { transform: 'translate(60px,0) scale(0.5)', opacity: '0' },
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18.2.0",
+      "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+      "ethers": "https://esm.sh/ethers@6.11.1"
+    }
+  }
+  </script>
+  <script>
+    window.__QUICK_DAPP_CONFIG__ = {
+      title: "ADITHI",
+      subtitle: "Your Digital Future",
+      contracts: [
+        {
+          id: "adithi",
+          alias: "Adithi",
+          name: "Adithi",
+          address: "0xd9145CCE52D386f254917e481eB44e9943F39138",
+          chainId: 137,
+          abi: [
+            { "inputs": [{ "internalType": "uint256", "name": "_total", "type": "uint256" }], "stateMutability": "nonpayable", "type": "constructor" },
+            { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "owner", "type": "address" }, { "indexed": true, "internalType": "address", "name": "spender", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Approval", "type": "event" },
+            { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "from", "type": "address" }, { "indexed": true, "internalType": "address", "name": "to", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Transfer", "type": "event" },
+            { "inputs": [{ "internalType": "address", "name": "", "type": "address" }, { "internalType": "address", "name": "", "type": "address" }], "name": "allowance", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+            { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "approve", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" },
+            { "inputs": [{ "internalType": "address", "name": "", "type": "address" }], "name": "balanceOf", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+            { "inputs": [], "name": "decimals", "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }], "stateMutability": "view", "type": "function" },
+            { "inputs": [], "name": "name", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" },
+            { "inputs": [], "name": "symbol", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" },
+            { "inputs": [], "name": "totalSupply", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+            { "inputs": [{ "internalType": "address", "name": "to", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transfer", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" },
+            { "inputs": [{ "internalType": "address", "name": "from", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transferFrom", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }
+          ]
+        }
+      ],
+      primaryContractId: "adithi"
+    };
+  </script>
+<script>
+window.onerror = function(msg, url, line, col, error) {
+  try { parent.console.error('[DApp-iframe] Error:', msg, 'at', url, 'line', line); } catch(e) {}
+  try { parent.postMessage({ source: 'quickdapp-preview', type: 'runtime-error', message: String(msg), file: url || '', line: line, col: col, stack: error && error.stack || '' }, '*'); } catch(e) {}
+};
+window.addEventListener('unhandledrejection', function(e) {
+  try { parent.console.error('[DApp-iframe] Unhandled rejection:', e.reason); } catch(e2) {}
+  try {
+    var err = e.reason instanceof Error ? e.reason : null;
+    var msg = err ? err.message : String(e.reason);
+    parent.postMessage({ source: 'quickdapp-preview', type: 'runtime-error', message: msg, stack: err && err.stack || '' }, '*');
+  } catch(e2) {}
+});
+</script>
+<script>window.__QUICK_DAPP_CONFIG__={"logo":"","title":"Adithi","details":"Generated by AI","contracts":[{"id":"vm-osaka:0xd9145cce52d386f254917e481eb44e9943f39138","alias":"Adithi","name":"Adithi","address":"0xd9145CCE52D386f254917e481eB44e9943F39138","abi":[{"inputs":[{"internalType":"uint256","name":"_total","type":"uint256"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"address","name":"","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}],"chainId":"vm-osaka","networkName":"VM"}],"primaryContractId":"vm-osaka:0xd9145cce52d386f254917e481eb44e9943f39138"};</script>
+
+
+<script>
+(function() {
+  if (parent.__remixVMBridge) {
+    var _listeners = {};
+    function emit(event, payload) {
+      (_listeners[event] || []).slice().forEach(function(cb) {
+        try { cb(payload); } catch (e) { setTimeout(function() { throw e; }, 0); }
+      });
+    }
+    function setAccounts(accounts, emitChange) {
+      window.ethereum.selectedAddress = accounts && accounts[0] ? accounts[0] : null;
+      if (emitChange) {
+        emit('accountsChanged', accounts || []);
+      }
+      return accounts;
+    }
+    function syncSelectedAddress(method, result) {
+      if (method === 'eth_accounts' || method === 'eth_requestAccounts') {
+        return setAccounts(result, false);
+      }
+      return result;
+    }
+    window.ethereum = {
+      isMetaMask: false,
+      isRemixVM: true,
+      _events: {},
+      request: function(args) {
+        return parent.__remixVMBridge.request(args).then(function(result) {
+          return syncSelectedAddress(args && args.method, result);
+        });
+      },
+      send: function(method, params) {
+        var requestArgs = typeof method === 'object' ? method : { method: method, params: params || [] };
+        return parent.__remixVMBridge.request(requestArgs).then(function(result) {
+          return syncSelectedAddress(requestArgs && requestArgs.method, result);
+        });
+      },
+      on: function(event, cb) {
+        if (!_listeners[event]) _listeners[event] = [];
+        _listeners[event].push(cb);
+        return this;
+      },
+      removeListener: function(event, cb) {
+        if (_listeners[event]) {
+          _listeners[event] = _listeners[event].filter(function(l) { return l !== cb; });
+        }
+        return this;
+      },
+      removeAllListeners: function() { _listeners = {}; return this; }
+    };
+    window.ethereum.chainId = '0x539';
+    window.ethereum.selectedAddress = null;
+    window.__remixVMUpdateAccounts = function(accounts) {
+      return setAccounts(accounts, true);
+    };
+  } else if (parent.__quickDappDesktopWalletBridge) {
+    var _desktopListeners = {};
+    function emitDesktopEvent(event, payload) {
+      (_desktopListeners[event] || []).slice().forEach(function(cb) {
+        try { cb(payload); } catch (e) { setTimeout(function() { throw e; }, 0); }
+      });
+    }
+    function syncDesktopProvider(method, result) {
+      if (method === 'eth_accounts' || method === 'eth_requestAccounts') {
+        window.ethereum.selectedAddress = result && result[0] ? result[0] : null;
+      }
+      if (method === 'eth_chainId') {
+        window.ethereum.chainId = result || null;
+      }
+      return result;
+    }
+    window.ethereum = {
+      isMetaMask: false,
+      isRemixDesktop: true,
+      chainId: null,
+      selectedAddress: null,
+      request: function(args) {
+        return parent.__quickDappDesktopWalletBridge.request(args).then(function(result) {
+          return syncDesktopProvider(args && args.method, result);
+        });
+      },
+      send: function(method, params) {
+        var requestArgs = typeof method === 'object' ? method : { method: method, params: params || [] };
+        return parent.__quickDappDesktopWalletBridge.request(requestArgs).then(function(result) {
+          return syncDesktopProvider(requestArgs && requestArgs.method, result);
+        });
+      },
+      on: function(event, cb) {
+        if (!_desktopListeners[event]) _desktopListeners[event] = [];
+        _desktopListeners[event].push(cb);
+        return this;
+      },
+      removeListener: function(event, cb) {
+        if (_desktopListeners[event]) {
+          _desktopListeners[event] = _desktopListeners[event].filter(function(listener) { return listener !== cb; });
+        }
+        return this;
+      },
+      removeAllListeners: function() { _desktopListeners = {}; return this; }
+    };
+    window.__quickDappDesktopWalletUpdate = function(update) {
+      if (update && update.accounts) {
+        window.ethereum.selectedAddress = update.accounts[0] || null;
+        emitDesktopEvent('accountsChanged', update.accounts);
+      }
+      if (update && update.chainId && update.chainId !== window.ethereum.chainId) {
+        window.ethereum.chainId = update.chainId;
+        emitDesktopEvent('chainChanged', update.chainId);
+      }
+      if (update && update.disconnected) {
+        window.ethereum.selectedAddress = null;
+        emitDesktopEvent('disconnect', { code: 4900, message: 'Browser Wallet disconnected.' });
+      }
+    };
+  } else if (parent.window && parent.window.ethereum) {
+    window.ethereum = parent.window.ethereum;
+  }
+})();
+</script>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.visible{visibility:visible}.relative{position:relative}.sticky{position:sticky}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-20{margin-top:5rem}.mt-4{margin-top:1rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-16{width:4rem}.w-2{width:0.5rem}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}@keyframes floatSlow{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(3deg)}}.animate-float-slow{animation:floatSlow 6s ease-in-out infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.overflow-hidden{overflow:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.break-all{word-break:break-all}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.bg-adi-bg{--tw-bg-opacity:1;background-color:rgb(9 11 26 / var(--tw-bg-opacity, 1))}.bg-adi-violet{--tw-bg-opacity:1;background-color:rgb(124 58 237 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-32{padding-bottom:8rem}.pt-20{padding-top:5rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.font-sans{font-family:Inter, sans-serif}.font-display{font-family:Space Grotesk, sans-serif}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.capitalize{text-transform:capitalize}.leading-tight{line-height:1.25}.tracking-wider{letter-spacing:0.05em}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-adi-violet{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-white\/20{color:rgb(255 255 255 / 0.2)}.text-white\/30{color:rgb(255 255 255 / 0.3)}.text-white\/40{color:rgb(255 255 255 / 0.4)}.text-white\/50{color:rgb(255 255 255 / 0.5)}.text-white\/60{color:rgb(255 255 255 / 0.6)}.text-white\/70{color:rgb(255 255 255 / 0.7)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-white\/5:hover{background-color:rgb(255 255 255 / 0.05)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:mx-0{margin-left:0px;margin-right:0px}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-start{justify-content:flex-start}.lg\:justify-end{justify-content:flex-end}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-left{text-align:left}.lg\:text-6xl{font-size:3.75rem;line-height:1}}</style><style type="text/css">/* ===== Global resets and base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #090B1A;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f24;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7C3AED, #3B82F6);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8B5CF6, #60A5FA);
+}
+
+/* ===== Glassmorphism ===== */
+.glass-card {
+  background: rgba(17, 19, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.15);
+}
+
+/* ===== Gradient text ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #7C3AED, #3B82F6, #06B6D4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Gradient button ===== */
+.btn-gradient {
+  background: linear-gradient(135deg, #7C3AED, #3B82F6);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+.btn-gradient:hover::before {
+  left: 100%;
+}
+.btn-gradient:hover {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+  transform: translateY(-2px);
+}
+.btn-gradient:active {
+  transform: translateY(0);
+}
+.btn-gradient:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== Neon glow ===== */
+.neon-violet {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3), inset 0 0 20px rgba(124, 58, 237, 0.05);
+}
+.neon-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.05);
+}
+
+/* ===== Background particles ===== */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* ===== 3D coin ===== */
+.coin-3d {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #7C3AED, #5b21b6, #4c1d95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(255,255,255,0.3);
+  box-shadow:
+    0 0 60px rgba(124, 58, 237, 0.4),
+    0 0 120px rgba(59, 130, 246, 0.2),
+    inset 0 -10px 30px rgba(0,0,0,0.3),
+    inset 0 10px 30px rgba(255,255,255,0.1);
+  position: relative;
+}
+.coin-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  pointer-events: none;
+}
+.coin-ring-1 {
+  width: 220px;
+  height: 220px;
+  border-color: rgba(124, 58, 237, 0.3);
+  animation: spin 20s linear infinite;
+}
+.coin-ring-2 {
+  width: 260px;
+  height: 260px;
+  border-color: rgba(59, 130, 246, 0.2);
+  border-style: dashed;
+  animation: spin 30s linear infinite reverse;
+}
+.coin-ring-3 {
+  width: 300px;
+  height: 300px;
+  border-color: rgba(6, 182, 212, 0.1);
+  animation: spin 40s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== Section reveal ===== */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Table row hover ===== */
+.tx-row {
+  transition: all 0.2s ease;
+}
+.tx-row:hover {
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* ===== Status badges ===== */
+.badge-success {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+.badge-pending {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+.badge-failed {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* ===== Input focus ===== */
+.input-adi {
+  background: rgba(9, 11, 26, 0.8);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+.input-adi:focus {
+  outline: none;
+  border-color: #7C3AED;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+.input-adi::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+/* ===== Mobile menu ===== */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mobile-menu.open {
+  max-height: 500px;
+}
+
+/* ===== Toast ===== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: slideUp 0.3s ease-out;
+  max-width: 400px;
+}
+.toast-success {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #4ade80;
+  backdrop-filter: blur(12px);
+}
+.toast-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+  backdrop-filter: blur(12px);
+}
+.toast-info {
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+  backdrop-filter: blur(12px);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Nav link ===== */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #7C3AED, #3B82F6);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .coin-3d {
+    width: 120px;
+    height: 120px;
+    font-size: 32px;
+  }
+  .coin-ring-1 { width: 160px; height: 160px; }
+  .coin-ring-2 { width: 200px; height: 200px; }
+  .coin-ring-3 { width: 240px; height: 240px; }
+}
+</style></head>
+<body class="bg-adi-bg text-white font-sans antialiased">
+  <div id="root"><div class="min-h-screen relative"><div class="particles-container"><div class="particle" style="width: 3.56858px; height: 3.56858px; top: 95.158%; left: 43.4145%; background-color: rgb(124, 58, 237); box-shadow: rgb(124, 58, 237) 0px 0px 7.13717px; animation: 9.70474s linear 3.3867s infinite normal none running particle;"></div><div class="particle" style="width: 2.62425px; height: 2.62425px; top: 90.2446%; left: 28.9213%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 5.2485px; animation: 7.66798s linear 3.97963s infinite normal none running particle;"></div><div class="particle" style="width: 4.06565px; height: 4.06565px; top: 53.5226%; left: 46.7793%; background-color: rgb(124, 58, 237); box-shadow: rgb(124, 58, 237) 0px 0px 8.13129px; animation: 7.77142s linear 1.85198s infinite normal none running particle;"></div><div class="particle" style="width: 5.90086px; height: 5.90086px; top: 48.5459%; left: 94.4012%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 11.8017px; animation: 8.68743s linear 4.44002s infinite normal none running particle;"></div><div class="particle" style="width: 3.26378px; height: 3.26378px; top: 93.9611%; left: 30.5898%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 6.52756px; animation: 6.7666s linear 3.13294s infinite normal none running particle;"></div><div class="particle" style="width: 4.19508px; height: 4.19508px; top: 48.2129%; left: 28.9928%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 8.39015px; animation: 6.45457s linear 4.083s infinite normal none running particle;"></div><div class="particle" style="width: 3.1398px; height: 3.1398px; top: 83.4173%; left: 78.5049%; background-color: rgb(124, 58, 237); box-shadow: rgb(124, 58, 237) 0px 0px 6.27961px; animation: 9.47645s linear 0.865998s infinite normal none running particle;"></div><div class="particle" style="width: 5.8298px; height: 5.8298px; top: 73.8416%; left: 46.3597%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 11.6596px; animation: 8.80253s linear 1.7946s infinite normal none running particle;"></div><div class="particle" style="width: 4.21323px; height: 4.21323px; top: 64.3951%; left: 4.33114%; background-color: rgb(124, 58, 237); box-shadow: rgb(124, 58, 237) 0px 0px 8.42646px; animation: 9.27227s linear 0.180416s infinite normal none running particle;"></div><div class="particle" style="width: 5.21317px; height: 5.21317px; top: 9.8165%; left: 52.1954%; background-color: rgb(59, 130, 246); box-shadow: rgb(59, 130, 246) 0px 0px 10.4263px; animation: 7.31966s linear 4.41041s infinite normal none running particle;"></div><div class="particle" style="width: 2.31055px; height: 2.31055px; top: 14.0498%; left: 86.3288%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 4.62109px; animation: 8.54842s linear 1.07255s infinite normal none running particle;"></div><div class="particle" style="width: 2.4906px; height: 2.4906px; top: 52.3675%; left: 96.2667%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 4.9812px; animation: 11.9024s linear 0.504827s infinite normal none running particle;"></div><div class="particle" style="width: 4.72699px; height: 4.72699px; top: 32.4889%; left: 54.3033%; background-color: rgb(59, 130, 246); box-shadow: rgb(59, 130, 246) 0px 0px 9.45398px; animation: 8.2574s linear 0.76598s infinite normal none running particle;"></div><div class="particle" style="width: 4.10689px; height: 4.10689px; top: 11.7742%; left: 87.0676%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 8.21378px; animation: 11.1783s linear 2.63107s infinite normal none running particle;"></div><div class="particle" style="width: 5.06021px; height: 5.06021px; top: 73.7521%; left: 32.0941%; background-color: rgb(59, 130, 246); box-shadow: rgb(59, 130, 246) 0px 0px 10.1204px; animation: 10.4793s linear 1.63669s infinite normal none running particle;"></div><div class="particle" style="width: 4.32231px; height: 4.32231px; top: 1.63506%; left: 84.4414%; background-color: rgb(59, 130, 246); box-shadow: rgb(59, 130, 246) 0px 0px 8.64461px; animation: 7.70771s linear 4.21549s infinite normal none running particle;"></div><div class="particle" style="width: 2.13134px; height: 2.13134px; top: 47.7542%; left: 27.1181%; background-color: rgb(124, 58, 237); box-shadow: rgb(124, 58, 237) 0px 0px 4.26268px; animation: 9.53738s linear 3.32233s infinite normal none running particle;"></div><div class="particle" style="width: 5.50384px; height: 5.50384px; top: 19.9156%; left: 18.3469%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 11.0077px; animation: 10.9245s linear 2.8308s infinite normal none running particle;"></div><div class="particle" style="width: 2.98829px; height: 2.98829px; top: 91.1972%; left: 12.5946%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 5.97658px; animation: 9.3967s linear 2.88634s infinite normal none running particle;"></div><div class="particle" style="width: 3.94279px; height: 3.94279px; top: 56.8418%; left: 56.0863%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 7.88558px; animation: 10.369s linear 3.35856s infinite normal none running particle;"></div><div class="particle" style="width: 4.48185px; height: 4.48185px; top: 12.7044%; left: 38.4306%; background-color: rgb(124, 58, 237); box-shadow: rgb(124, 58, 237) 0px 0px 8.96371px; animation: 8.85302s linear 2.45445s infinite normal none running particle;"></div><div class="particle" style="width: 3.87353px; height: 3.87353px; top: 13.2295%; left: 65.7329%; background-color: rgb(59, 130, 246); box-shadow: rgb(59, 130, 246) 0px 0px 7.74707px; animation: 10.6141s linear 3.96571s infinite normal none running particle;"></div><div class="particle" style="width: 4.71862px; height: 4.71862px; top: 38.3509%; left: 91.6213%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 9.43723px; animation: 6.12923s linear 2.40146s infinite normal none running particle;"></div><div class="particle" style="width: 2.143px; height: 2.143px; top: 24.7739%; left: 99.386%; background-color: rgb(59, 130, 246); box-shadow: rgb(59, 130, 246) 0px 0px 4.28601px; animation: 9.90044s linear 4.91776s infinite normal none running particle;"></div><div class="particle" style="width: 3.07135px; height: 3.07135px; top: 94.9548%; left: 79.5835%; background-color: rgb(59, 130, 246); box-shadow: rgb(59, 130, 246) 0px 0px 6.1427px; animation: 11.0512s linear 1.01723s infinite normal none running particle;"></div><div class="particle" style="width: 4.59128px; height: 4.59128px; top: 67.0015%; left: 71.2024%; background-color: rgb(124, 58, 237); box-shadow: rgb(124, 58, 237) 0px 0px 9.18257px; animation: 11.9176s linear 3.9825s infinite normal none running particle;"></div><div class="particle" style="width: 5.4377px; height: 5.4377px; top: 26.5995%; left: 54.346%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 10.8754px; animation: 8.80689s linear 0.268821s infinite normal none running particle;"></div><div class="particle" style="width: 3.18652px; height: 3.18652px; top: 56.1841%; left: 17.8629%; background-color: rgb(6, 182, 212); box-shadow: rgb(6, 182, 212) 0px 0px 6.37304px; animation: 7.66988s linear 4.44846s infinite normal none running particle;"></div><div class="particle" style="width: 4.39173px; height: 4.39173px; top: 93.2051%; left: 37.7491%; background-color: rgb(59, 130, 246); box-shadow: rgb(59, 130, 246) 0px 0px 8.78346px; animation: 10.4432s linear 3.2341s infinite normal none running particle;"></div><div class="particle" style="width: 3.86502px; height: 3.86502px; top: 76.9549%; left: 93.3387%; background-color: rgb(124, 58, 237); box-shadow: rgb(124, 58, 237) 0px 0px 7.73003px; animation: 11.7892s linear 0.140636s infinite normal none running particle;"></div></div><nav class="sticky top-0 z-50 backdrop-blur-xl" style="background: rgba(9, 11, 26, 0.8); border-bottom: 1px solid rgba(124, 58, 237, 0.15);"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16"><div class="flex items-center gap-3 cursor-pointer"><div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background: linear-gradient(135deg, rgb(124, 58, 237), rgb(59, 130, 246)); box-shadow: rgba(124, 58, 237, 0.4) 0px 0px 15px;">ADI</div><span class="font-display text-lg font-bold tracking-wider gradient-text">Adithi</span></div><div class="hidden md:flex items-center gap-8"><a class="nav-link text-sm font-medium text-white/70 hover:text-white cursor-pointer capitalize" style="color: rgb(255, 255, 255);">home</a><a class="nav-link text-sm font-medium text-white/70 hover:text-white cursor-pointer capitalize">dashboard</a><a class="nav-link text-sm font-medium text-white/70 hover:text-white cursor-pointer capitalize">Send ADI</a><a class="nav-link text-sm font-medium text-white/70 hover:text-white cursor-pointer capitalize">transactions</a><a class="nav-link text-sm font-medium text-white/70 hover:text-white cursor-pointer capitalize">about</a></div><div class="flex items-center gap-3"><button class="btn-gradient px-5 py-2 rounded-xl text-sm font-semibold text-white">Connect Wallet</button><button class="md:hidden p-2 rounded-lg hover:bg-white/5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div><div class="mobile-menu md:hidden "><div class="flex flex-col gap-3 py-4"><a class="text-white/70 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 cursor-pointer capitalize text-sm font-medium">home</a><a class="text-white/70 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 cursor-pointer capitalize text-sm font-medium">dashboard</a><a class="text-white/70 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 cursor-pointer capitalize text-sm font-medium">Send ADI</a><a class="text-white/70 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 cursor-pointer capitalize text-sm font-medium">transactions</a><a class="text-white/70 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 cursor-pointer capitalize text-sm font-medium">about</a></div></div></div></nav><section id="home" class="section-reveal visible relative z-10 pt-20 pb-32 px-4 sm:px-6 lg:px-8"><div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12"><div class="flex-1 text-center lg:text-left"><div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style="background: rgba(124, 58, 237, 0.1); border: 1px solid rgba(124, 58, 237, 0.25);"><div class="w-2 h-2 rounded-full bg-adi-violet animate-pulse"></div><span class="text-xs font-medium text-adi-violet">— (—) on Polygon</span></div><h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4"><span class="gradient-text">Welcome to Adithi</span><br><span class="text-white">Your Digital Future.</span></h1><p class="text-lg text-white/60 mb-8 max-w-xl mx-auto lg:mx-0">Experience seamless crypto transactions on Polygon. Fast, secure, and built for the decentralized economy.</p><div class="flex flex-wrap gap-4 justify-center lg:justify-start"><button class="btn-gradient px-8 py-3.5 rounded-xl font-semibold text-white text-sm">Launch Dashboard</button><button class="px-8 py-3.5 rounded-xl font-semibold text-sm transition-all" style="background: rgba(17, 19, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.3);"><span class="text-blue-400">Explore Token</span></button></div></div><div class="flex-1 flex justify-center lg:justify-end"><div class="relative flex items-center justify-center" style="width: 300px; height: 300px;"><div class="coin-ring coin-ring-3"></div><div class="coin-ring coin-ring-2"></div><div class="coin-ring coin-ring-1"></div><div class="coin-3d animate-float-slow"><span style="font-family: &quot;Space Grotesk&quot;, sans-serif;">ADI</span></div></div></div></div></section><section id="dashboard" class="section-reveal visible relative z-10 py-20 px-4 sm:px-6 lg:px-8"><div class="max-w-7xl mx-auto"><div class="flex items-center justify-between mb-10"><div><h2 class="font-display text-3xl font-bold mb-2"><span class="gradient-text">Token Dashboard</span></h2><p class="text-white/50 text-sm">Real-time on-chain data from the — contract</p></div></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"><div class="glass-card p-6 neon-violet"><div class="flex items-center justify-between mb-4"><span class="text-xs font-medium text-white/40 uppercase tracking-wider">Your Balance</span><div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(124, 58, 237, 0.15);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="text-3xl font-bold font-display mb-1">0</div><div class="text-sm text-white/40">—</div></div><div class="glass-card p-6 neon-blue"><div class="flex items-center justify-between mb-4"><span class="text-xs font-medium text-white/40 uppercase tracking-wider">Total Supply</span><div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(59, 130, 246, 0.15);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M9 19c-5 0-8-3-8-7s3-7 8-7 8 3 8 7-3 7-8 7z M9 19c3 0 5-3 5-7s-2-7-5-7-5 3-5 7 2 7 5 7z" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="text-3xl font-bold font-display mb-1">0</div><div class="text-sm text-white/40">— Tokens</div></div><div class="glass-card p-6" style="box-shadow: rgba(6, 182, 212, 0.2) 0px 0px 20px;"><div class="flex items-center justify-between mb-4"><span class="text-xs font-medium text-white/40 uppercase tracking-wider">Network</span><div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(6, 182, 212, 0.15);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2"><path d="M5 12h14m-7-7v14" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"></circle></svg></div></div><div class="text-xl font-bold font-display mb-1">Not Connected</div><div class="text-sm text-white/40">Connect your wallet</div></div><div class="glass-card p-6" style="box-shadow: rgba(124, 58, 237, 0.15) 0px 0px 20px;"><div class="flex items-center justify-between mb-4"><span class="text-xs font-medium text-white/40 uppercase tracking-wider">Contract</span><div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(124, 58, 237, 0.15);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="text-sm font-mono mb-2 break-all text-white/70">0xd914…9138</div><div class="flex gap-2"><button class="text-xs px-3 py-1.5 rounded-lg transition-all hover:bg-white/5" style="background: rgba(124, 58, 237, 0.1); border: 1px solid rgba(124, 58, 237, 0.2);">Copy</button><a href="https://polygonscan.com/address/0xd9145CCE52D386f254917e481eB44e9943F39138" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1.5 rounded-lg transition-all hover:bg-white/5" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2);">Explorer ↗</a></div></div></div></div></section><section id="send" class="section-reveal visible relative z-10 py-20 px-4 sm:px-6 lg:px-8"><div class="max-w-2xl mx-auto"><div class="text-center mb-8"><h2 class="font-display text-3xl font-bold mb-2"><span class="gradient-text">Send ADI</span></h2><p class="text-white/50 text-sm">Transfer — tokens to any address</p></div><div class="glass-card p-8 neon-violet"><div class="text-center py-12"><div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center" style="background: rgba(124, 58, 237, 0.1);"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3 class="text-xl font-semibold mb-2">Connect Your Wallet</h3><p class="text-white/50 text-sm mb-6">Connect your wallet to start sending — tokens</p><button class="btn-gradient px-8 py-3 rounded-xl font-semibold text-white text-sm">Connect Wallet</button></div></div></div></section><section id="transactions" class="section-reveal visible relative z-10 py-20 px-4 sm:px-6 lg:px-8"><div class="max-w-6xl mx-auto"><div class="mb-8"><h2 class="font-display text-3xl font-bold mb-2"><span class="gradient-text">Transaction History</span></h2><p class="text-white/50 text-sm">Your recent — transfers</p></div><div class="glass-card overflow-hidden"><div class="text-center py-16"><div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center" style="background: rgba(124, 58, 237, 0.1);"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><p class="text-white/40 text-sm">No transactions yet. Send some — to see history here.</p></div></div></div></section><section id="token-info" class="section-reveal visible relative z-10 py-20 px-4 sm:px-6 lg:px-8"><div class="max-w-6xl mx-auto"><div class="text-center mb-10"><h2 class="font-display text-3xl font-bold mb-2"><span class="gradient-text">Token Information</span></h2><p class="text-white/50 text-sm">Details about the — (—) token</p></div><div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8"><div class="glass-card p-5 text-center"><div class="text-2xl mb-3">📝</div><div class="text-xs text-white/40 uppercase tracking-wider mb-1">Name</div><div class="text-sm font-semibold text-white truncate">—</div></div><div class="glass-card p-5 text-center"><div class="text-2xl mb-3">🏷️</div><div class="text-xs text-white/40 uppercase tracking-wider mb-1">Symbol</div><div class="text-sm font-semibold text-white truncate">—</div></div><div class="glass-card p-5 text-center"><div class="text-2xl mb-3">🔗</div><div class="text-xs text-white/40 uppercase tracking-wider mb-1">Network</div><div class="text-sm font-semibold text-white truncate">Polygon PoS</div></div><div class="glass-card p-5 text-center"><div class="text-2xl mb-3">📋</div><div class="text-xs text-white/40 uppercase tracking-wider mb-1">Standard</div><div class="text-sm font-semibold text-white truncate">ERC-20</div></div><div class="glass-card p-5 text-center"><div class="text-2xl mb-3">🔢</div><div class="text-xs text-white/40 uppercase tracking-wider mb-1">Decimals</div><div class="text-sm font-semibold text-white truncate">18</div></div><div class="glass-card p-5 text-center"><div class="text-2xl mb-3">🔒</div><div class="text-xs text-white/40 uppercase tracking-wider mb-1">Supply Type</div><div class="text-sm font-semibold text-white truncate">Fixed</div></div></div><div class="glass-card p-8 flex flex-col lg:flex-row items-center justify-between gap-6"><div class="text-center lg:text-left"><h3 class="font-display text-xl font-bold mb-2">Contract Address</h3><p class="text-sm font-mono text-white/60 break-all">0xd9145CCE52D386f254917e481eB44e9943F39138</p></div><div class="flex gap-3 flex-wrap justify-center"><button class="px-6 py-3 rounded-xl text-sm font-medium transition-all hover:scale-105" style="background: rgba(124, 58, 237, 0.1); border: 1px solid rgba(124, 58, 237, 0.3);">Copy Address</button><a href="https://polygonscan.com/address/0xd9145CCE52D386f254917e481eB44e9943F39138" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl text-sm font-medium transition-all hover:scale-105" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3);">View on PolygonScan ↗</a></div></div></div></section><section id="about" class="section-reveal visible relative z-10 py-20 px-4 sm:px-6 lg:px-8"><div class="max-w-6xl mx-auto"><div class="text-center mb-12"><h2 class="font-display text-3xl font-bold mb-4"><span class="gradient-text">About Adithi</span></h2><p class="text-white/50 text-sm max-w-2xl mx-auto">Adithi is an ERC-20 token built on the Polygon blockchain, offering fast, secure, and low-cost transactions for the decentralized future. Our platform empowers users with full control over their digital assets through transparent smart-contract technology.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="glass-card p-8 text-center neon-violet" style="border-radius: 20px;"><div class="w-16 h-16 mx-auto mb-5 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(124, 58, 237, 0.05));"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3 class="font-display text-lg font-bold mb-3">Secure Transfers</h3><p class="text-white/50 text-sm">Every transaction is secured by Polygon's robust proof-of-stake consensus, ensuring your tokens are always safe and verifiable on-chain.</p></div><div class="glass-card p-8 text-center neon-blue" style="border-radius: 20px;"><div class="w-16 h-16 mx-auto mb-5 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.05));"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3 class="font-display text-lg font-bold mb-3">Polygon Blockchain</h3><p class="text-white/50 text-sm">Built on Polygon's high-performance Layer 2 network, Adithi delivers lightning-fast transactions with minimal gas fees and full Ethereum compatibility.</p></div><div class="glass-card p-8 text-center" style="border-radius: 20px; box-shadow: rgba(6, 182, 212, 0.2) 0px 0px 20px;"><div class="w-16 h-16 mx-auto mb-5 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(6, 182, 212, 0.05));"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3 class="font-display text-lg font-bold mb-3">Wallet Control</h3><p class="text-white/50 text-sm">Your keys, your tokens. Adithi uses non-custodial wallet integration, meaning you always retain full control of your assets — no intermediaries required.</p></div></div></div></section><footer class="relative z-10 mt-20 py-12 px-4 sm:px-6 lg:px-8" style="border-top: 1px solid rgba(124, 58, 237, 0.1);"><div class="max-w-7xl mx-auto"><div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"><div class="md:col-span-2"><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background: linear-gradient(135deg, rgb(124, 58, 237), rgb(59, 130, 246)); box-shadow: rgba(124, 58, 237, 0.4) 0px 0px 15px;">ADI</div><span class="font-display text-lg font-bold gradient-text">Adithi</span></div><p class="text-white/40 text-sm max-w-md">Your Digital Future. A premium ERC-20 token experience on the Polygon blockchain — fast, secure, and built for the decentralized economy.</p></div><div><h4 class="text-sm font-semibold text-white/70 mb-4">Navigation</h4><div class="flex flex-col gap-2"><a class="text-sm text-white/40 hover:text-white transition-colors cursor-pointer">Home</a><a class="text-sm text-white/40 hover:text-white transition-colors cursor-pointer">Dashboard</a><a class="text-sm text-white/40 hover:text-white transition-colors cursor-pointer">Send ADI</a><a class="text-sm text-white/40 hover:text-white transition-colors cursor-pointer">Transactions</a><a class="text-sm text-white/40 hover:text-white transition-colors cursor-pointer">About</a></div></div><div><h4 class="text-sm font-semibold text-white/70 mb-4">Resources</h4><div class="flex flex-col gap-2"><a href="https://polygonscan.com/address/0xd9145CCE52D386f254917e481eB44e9943F39138" target="_blank" rel="noopener noreferrer" class="text-sm text-white/40 hover:text-white transition-colors">PolygonScan ↗</a><a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer" class="text-sm text-white/40 hover:text-white transition-colors">Polygon Docs ↗</a><a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" target="_blank" rel="noopener noreferrer" class="text-sm text-white/40 hover:text-white transition-colors">ERC-20 Standard ↗</a></div></div></div><div class="pt-8" style="border-top: 1px solid rgba(255, 255, 255, 0.05);"><p class="text-xs text-white/30 text-center max-w-3xl mx-auto">⚠️ Digital assets carry risk. Adithi (—) is a decentralized token on the Polygon blockchain. Always do your own research and never invest more than you can afford to lose. Transactions are irreversible. This application is provided "as is" without warranties of any kind.</p><p class="text-xs text-white/20 text-center mt-4">© 2026 Adithi. Built on Polygon.</p></div></div></footer></div></div>
+  
+<script type="module">
+// local:/src/main.jsx
+import React2 from "https://esm.sh/react@18.2.0";
+import { createRoot } from "https://esm.sh/react-dom@18.2.0/client";
+
+// local:/src/App.jsx
+import React, { useState, useEffect, useRef, useCallback } from "https://esm.sh/react@18.2.0";
+import { ethers } from "https://esm.sh/ethers@6.11.1";
+var shortenAddr = (addr) => {
+  if (!addr) return "";
+  return addr.slice(0, 6) + "\u2026" + addr.slice(-4);
+};
+var formatADI = (val, decimals = 18) => {
+  try {
+    return parseFloat(ethers.formatUnits(val, decimals)).toLocaleString(void 0, {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 4
+    });
+  } catch {
+    return "0";
+  }
+};
+var copyToClipboard = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
+  }
+};
+var getConfig = () => {
+  const cfg = window.__QUICK_DAPP_CONFIG__ || {};
+  const contracts = cfg.contracts || [];
+  const primaryId = cfg.primaryContractId;
+  const primary = contracts.find((c) => c.id === primaryId) || contracts[0];
+  return { cfg, contracts, primary };
+};
+var EXPLORER_BASES = {
+  137: "https://polygonscan.com",
+  80002: "https://amoy.polygonscan.com"
+};
+var getExplorerBase = (chainId) => EXPLORER_BASES[chainId] || "https://polygonscan.com";
+var ERC20_ABI = [
+  "function name() view returns (string)",
+  "function symbol() view returns (string)",
+  "function decimals() view returns (uint8)",
+  "function totalSupply() view returns (uint256)",
+  "function balanceOf(address) view returns (uint256)",
+  "function transfer(address to, uint256 amount) returns (bool)",
+  "function approve(address spender, uint256 amount) returns (bool)",
+  "function allowance(address owner, address spender) view returns (uint256)",
+  "event Transfer(address indexed from, address indexed to, uint256 value)",
+  "event Approval(address indexed owner, address indexed spender, uint256 value)"
+];
+var Particles = () => {
+  const particles = React.useMemo(() => {
+    return Array.from({ length: 30 }).map((_, i) => ({
+      id: i,
+      size: Math.random() * 4 + 2,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      color: ["#7C3AED", "#3B82F6", "#06B6D4"][Math.floor(Math.random() * 3)],
+      duration: Math.random() * 6 + 6,
+      delay: Math.random() * 5
+    }));
+  }, []);
+  return /* @__PURE__ */ React.createElement("div", { className: "particles-container" }, particles.map((p) => /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      key: p.id,
+      className: "particle",
+      style: {
+        width: p.size + "px",
+        height: p.size + "px",
+        top: p.top + "%",
+        left: p.left + "%",
+        backgroundColor: p.color,
+        boxShadow: `0 0 ${p.size * 2}px ${p.color}`,
+        animation: `particle ${p.duration}s linear infinite`,
+        animationDelay: p.delay + "s"
+      }
+    }
+  )));
+};
+var Toast = ({ message, type, onClose }) => {
+  useEffect(() => {
+    const timer = setTimeout(onClose, 5e3);
+    return () => clearTimeout(timer);
+  }, [onClose]);
+  const cls = type === "success" ? "toast-success" : type === "error" ? "toast-error" : "toast-info";
+  const icon = type === "success" ? "\u2713" : type === "error" ? "\u2715" : "\u2139";
+  return /* @__PURE__ */ React.createElement("div", { className: `toast ${cls}` }, /* @__PURE__ */ React.createElement("span", { style: { fontSize: "18px" } }, icon), /* @__PURE__ */ React.createElement("span", null, message));
+};
+var Section = ({ id, children, className = "" }) => {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+  return /* @__PURE__ */ React.createElement(
+    "section",
+    {
+      id,
+      ref,
+      className: `section-reveal ${visible ? "visible" : ""} ${className}`
+    },
+    children
+  );
+};
+var Coin3D = () => /* @__PURE__ */ React.createElement("div", { className: "relative flex items-center justify-center", style: { width: 300, height: 300 } }, /* @__PURE__ */ React.createElement("div", { className: "coin-ring coin-ring-3" }), /* @__PURE__ */ React.createElement("div", { className: "coin-ring coin-ring-2" }), /* @__PURE__ */ React.createElement("div", { className: "coin-ring coin-ring-1" }), /* @__PURE__ */ React.createElement("div", { className: "coin-3d animate-float-slow" }, /* @__PURE__ */ React.createElement("span", { style: { fontFamily: "'Space Grotesk', sans-serif" } }, "ADI")));
+function App() {
+  const { cfg, primary } = getConfig();
+  const appTitle = cfg.title || "ADITHI";
+  const [account, setAccount] = useState(null);
+  const [provider, setProvider] = useState(null);
+  const [signer, setSigner] = useState(null);
+  const [contract, setContract] = useState(null);
+  const [connected, setConnected] = useState(false);
+  const [connecting, setConnecting] = useState(false);
+  const [networkName, setNetworkName] = useState("");
+  const [chainId, setChainId] = useState(null);
+  const [tokenInfo, setTokenInfo] = useState({
+    name: "\u2014",
+    symbol: "\u2014",
+    decimals: 18,
+    totalSupply: "0"
+  });
+  const [balance, setBalance] = useState("0");
+  const [loadingData, setLoadingData] = useState(false);
+  const [sendForm, setSendForm] = useState({ recipient: "", amount: "" });
+  const [sendStatus, setSendStatus] = useState(null);
+  const [sending, setSending] = useState(false);
+  const [gasEstimate, setGasEstimate] = useState(null);
+  const [txHistory, setTxHistory] = useState([]);
+  const [copied, setCopied] = useState(false);
+  const [toast, setToast] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const showToast = useCallback((message, type = "info") => {
+    setToast({ message, type, id: Date.now() });
+  }, []);
+  const setupContract = useCallback(async (prov, acct) => {
+    if (!primary || !prov) return;
+    try {
+      const sig = await prov.getSigner();
+      const c = new ethers.Contract(primary.address, ERC20_ABI, sig);
+      setSigner(sig);
+      setContract(c);
+      const [name, symbol, decimals, totalSupply] = await Promise.all([
+        c.name(),
+        c.symbol(),
+        c.decimals(),
+        c.totalSupply()
+      ]);
+      setTokenInfo({ name, symbol, decimals: Number(decimals), totalSupply: totalSupply.toString() });
+      if (acct) {
+        const bal = await c.balanceOf(acct);
+        setBalance(bal.toString());
+      }
+      const network = await prov.getNetwork();
+      setChainId(Number(network.chainId));
+      const chainNames = { 137: "Polygon Mainnet", 80002: "Polygon Amoy" };
+      setNetworkName(chainNames[Number(network.chainId)] || `Chain ${network.chainId}`);
+    } catch (err) {
+      console.error("Contract setup error:", err);
+    }
+  }, [primary]);
+  const connectWallet = async () => {
+    if (connecting) return;
+    if (!window.ethereum) {
+      showToast("No wallet detected. Please install MetaMask.", "error");
+      return;
+    }
+    setConnecting(true);
+    try {
+      const prov = new ethers.BrowserProvider(window.ethereum);
+      await prov.send("eth_requestAccounts", []);
+      const accounts = await prov.listAccounts();
+      const acct = accounts[0]?.address || null;
+      setAccount(acct);
+      setProvider(prov);
+      setConnected(true);
+      setLoadingData(true);
+      await setupContract(prov, acct);
+      setLoadingData(false);
+      showToast("Wallet connected successfully!", "success");
+    } catch (err) {
+      console.error("Connect error:", err);
+      showToast("Failed to connect wallet: " + (err.message || "Unknown error"), "error");
+    } finally {
+      setConnecting(false);
+    }
+  };
+  useEffect(() => {
+    if (!window.ethereum) return;
+    const handleAccountsChanged = async (accounts) => {
+      if (accounts.length === 0) {
+        setAccount(null);
+        setConnected(false);
+        setContract(null);
+        setBalance("0");
+        showToast("Wallet disconnected.", "info");
+      } else {
+        const acct = accounts[0];
+        setAccount(acct);
+        if (provider) {
+          setLoadingData(true);
+          await setupContract(provider, acct);
+          setLoadingData(false);
+        }
+      }
+    };
+    const handleChainChanged = async () => {
+      if (provider) {
+        setLoadingData(true);
+        await setupContract(provider, account);
+        setLoadingData(false);
+      }
+    };
+    window.ethereum.on?.("accountsChanged", handleAccountsChanged);
+    window.ethereum.on?.("chainChanged", handleChainChanged);
+    return () => {
+      window.ethereum.removeListener?.("accountsChanged", handleAccountsChanged);
+      window.ethereum.removeListener?.("chainChanged", handleChainChanged);
+    };
+  }, [provider, account, setupContract]);
+  const refreshBalance = async () => {
+    if (!contract || !account) return;
+    try {
+      const bal = await contract.balanceOf(account);
+      setBalance(bal.toString());
+      showToast("Balance refreshed.", "info");
+    } catch (err) {
+      showToast("Failed to refresh balance.", "error");
+    }
+  };
+  const handleSend = async (e) => {
+    e?.preventDefault?.();
+    if (!contract || !account) {
+      showToast("Please connect your wallet first.", "error");
+      return;
+    }
+    if (!sendForm.recipient || !sendForm.amount) {
+      showToast("Please enter recipient address and amount.", "error");
+      return;
+    }
+    if (!ethers.isAddress(sendForm.recipient)) {
+      showToast("Invalid recipient address.", "error");
+      return;
+    }
+    if (parseFloat(sendForm.amount) <= 0) {
+      showToast("Amount must be greater than 0.", "error");
+      return;
+    }
+    setSending(true);
+    setSendStatus("pending");
+    const txId = Date.now();
+    const txRecord = {
+      id: txId,
+      hash: "\u2014",
+      date: (/* @__PURE__ */ new Date()).toLocaleString(),
+      type: "Transfer",
+      amount: sendForm.amount,
+      status: "pending"
+    };
+    setTxHistory((prev) => [txRecord, ...prev]);
+    try {
+      const decimals = tokenInfo.decimals || 18;
+      const amountWei = ethers.parseUnits(sendForm.amount, decimals);
+      const tx = await contract.transfer(sendForm.recipient, amountWei);
+      txRecord.hash = tx.hash;
+      setTxHistory((prev) => prev.map((t) => t.id === txId ? { ...t, hash: tx.hash } : t));
+      setSendStatus("mining");
+      await tx.wait();
+      setSendStatus("success");
+      setTxHistory(
+        (prev) => prev.map((t) => t.id === txId ? { ...t, status: "success" } : t)
+      );
+      showToast(`Successfully sent ${sendForm.amount} ${tokenInfo.symbol}!`, "success");
+      const bal = await contract.balanceOf(account);
+      setBalance(bal.toString());
+      setSendForm({ recipient: "", amount: "" });
+    } catch (err) {
+      console.error("Send error:", err);
+      setSendStatus("error");
+      setTxHistory(
+        (prev) => prev.map((t) => t.id === txId ? { ...t, status: "failed" } : t)
+      );
+      const msg = err?.shortMessage || err?.message || "Transaction failed";
+      showToast("Transaction failed: " + msg, "error");
+    } finally {
+      setSending(false);
+      setTimeout(() => setSendStatus(null), 3e3);
+    }
+  };
+  const estimateGas = async () => {
+    if (!contract || !sendForm.recipient || !sendForm.amount) {
+      setGasEstimate(null);
+      return;
+    }
+    if (!ethers.isAddress(sendForm.recipient) || parseFloat(sendForm.amount) <= 0) {
+      setGasEstimate(null);
+      return;
+    }
+    try {
+      const decimals = tokenInfo.decimals || 18;
+      const amountWei = ethers.parseUnits(sendForm.amount, decimals);
+      const gas = await contract.transfer.estimateGas(sendForm.recipient, amountWei);
+      const prov = contract.runner?.provider || provider;
+      if (prov) {
+        const feeData = await prov.getFeeData();
+        const gasCost = gas * (feeData.gasPrice || 0n);
+        setGasEstimate(ethers.formatEther(gasCost));
+      }
+    } catch {
+      setGasEstimate(null);
+    }
+  };
+  useEffect(() => {
+    const timer = setTimeout(() => estimateGas(), 500);
+    return () => clearTimeout(timer);
+  }, [sendForm.recipient, sendForm.amount, contract]);
+  const handleCopy = async () => {
+    const ok = await copyToClipboard(primary?.address || "");
+    if (ok) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2e3);
+      showToast("Contract address copied!", "success");
+    }
+  };
+  const handleMax = () => {
+    const formatted = formatADI(balance, tokenInfo.decimals || 18);
+    setSendForm((prev) => ({ ...prev, amount: formatted }));
+  };
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setActiveSection(id);
+    setMobileMenuOpen(false);
+  };
+  const displayBalance = formatADI(balance, tokenInfo.decimals || 18);
+  const displaySupply = formatADI(tokenInfo.totalSupply, tokenInfo.decimals || 18);
+  const explorerBase = getExplorerBase(chainId || primary?.chainId);
+  const contractAddr = primary?.address || "";
+  const isConnected = connected && account;
+  return /* @__PURE__ */ React.createElement("div", { className: "min-h-screen relative" }, /* @__PURE__ */ React.createElement(Particles, null), toast && /* @__PURE__ */ React.createElement(Toast, { key: toast.id, message: toast.message, type: toast.type, onClose: () => setToast(null) }), /* @__PURE__ */ React.createElement("nav", { className: "sticky top-0 z-50 backdrop-blur-xl", style: {
+    background: "rgba(9,11,26,0.8)",
+    borderBottom: "1px solid rgba(124,58,237,0.15)"
+  } }, /* @__PURE__ */ React.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between h-16" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-3 cursor-pointer", onClick: () => scrollToSection("home") }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm",
+      style: {
+        background: "linear-gradient(135deg, #7C3AED, #3B82F6)",
+        boxShadow: "0 0 15px rgba(124,58,237,0.4)"
+      }
+    },
+    "ADI"
+  ), /* @__PURE__ */ React.createElement("span", { className: "font-display text-lg font-bold tracking-wider gradient-text" }, appTitle)), /* @__PURE__ */ React.createElement("div", { className: "hidden md:flex items-center gap-8" }, ["home", "dashboard", "send", "transactions", "about"].map((item) => /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      key: item,
+      className: "nav-link text-sm font-medium text-white/70 hover:text-white cursor-pointer capitalize",
+      onClick: () => scrollToSection(item),
+      style: activeSection === item ? { color: "#fff" } : {}
+    },
+    item === "send" ? "Send ADI" : item
+  ))), /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-3" }, isConnected ? /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium",
+      style: {
+        background: "rgba(34,197,94,0.1)",
+        border: "1px solid rgba(34,197,94,0.3)"
+      }
+    },
+    /* @__PURE__ */ React.createElement("div", { className: "w-2 h-2 rounded-full bg-green-400 animate-pulse" }),
+    /* @__PURE__ */ React.createElement("span", { className: "text-green-400" }, shortenAddr(account))
+  ) : /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      onClick: connectWallet,
+      disabled: connecting,
+      className: "btn-gradient px-5 py-2 rounded-xl text-sm font-semibold text-white"
+    },
+    connecting ? "Connecting\u2026" : "Connect Wallet"
+  ), /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      className: "md:hidden p-2 rounded-lg hover:bg-white/5",
+      onClick: () => setMobileMenuOpen(!mobileMenuOpen)
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2" }, mobileMenuOpen ? /* @__PURE__ */ React.createElement("path", { d: "M6 18L18 6M6 6l12 12", strokeLinecap: "round", strokeLinejoin: "round" }) : /* @__PURE__ */ React.createElement("path", { d: "M4 6h16M4 12h16M4 18h16", strokeLinecap: "round", strokeLinejoin: "round" }))
+  ))), /* @__PURE__ */ React.createElement("div", { className: `mobile-menu md:hidden ${mobileMenuOpen ? "open" : ""}` }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-col gap-3 py-4" }, ["home", "dashboard", "send", "transactions", "about"].map((item) => /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      key: item,
+      className: "text-white/70 hover:text-white py-2 px-4 rounded-lg hover:bg-white/5 cursor-pointer capitalize text-sm font-medium",
+      onClick: () => scrollToSection(item)
+    },
+    item === "send" ? "Send ADI" : item
+  )))))), /* @__PURE__ */ React.createElement(Section, { id: "home", className: "relative z-10 pt-20 pb-32 px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12" }, /* @__PURE__ */ React.createElement("div", { className: "flex-1 text-center lg:text-left" }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6",
+      style: { background: "rgba(124,58,237,0.1)", border: "1px solid rgba(124,58,237,0.25)" }
+    },
+    /* @__PURE__ */ React.createElement("div", { className: "w-2 h-2 rounded-full bg-adi-violet animate-pulse" }),
+    /* @__PURE__ */ React.createElement("span", { className: "text-xs font-medium text-adi-violet" }, tokenInfo.name, " (", tokenInfo.symbol, ") on Polygon")
+  ), /* @__PURE__ */ React.createElement("h1", { className: "font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4" }, /* @__PURE__ */ React.createElement("span", { className: "gradient-text" }, "Welcome to ", appTitle), /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("span", { className: "text-white" }, "Your Digital Future.")), /* @__PURE__ */ React.createElement("p", { className: "text-lg text-white/60 mb-8 max-w-xl mx-auto lg:mx-0" }, "Experience seamless crypto transactions on Polygon. Fast, secure, and built for the decentralized economy."), /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap gap-4 justify-center lg:justify-start" }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      onClick: () => scrollToSection("dashboard"),
+      className: "btn-gradient px-8 py-3.5 rounded-xl font-semibold text-white text-sm"
+    },
+    "Launch Dashboard"
+  ), /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      onClick: () => scrollToSection("token-info"),
+      className: "px-8 py-3.5 rounded-xl font-semibold text-sm transition-all",
+      style: {
+        background: "rgba(17,19,42,0.6)",
+        border: "1px solid rgba(59,130,246,0.3)"
+      }
+    },
+    /* @__PURE__ */ React.createElement("span", { className: "text-blue-400" }, "Explore Token")
+  ))), /* @__PURE__ */ React.createElement("div", { className: "flex-1 flex justify-center lg:justify-end" }, /* @__PURE__ */ React.createElement(Coin3D, null)))), /* @__PURE__ */ React.createElement(Section, { id: "dashboard", className: "relative z-10 py-20 px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-7xl mx-auto" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between mb-10" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-3xl font-bold mb-2" }, /* @__PURE__ */ React.createElement("span", { className: "gradient-text" }, "Token Dashboard")), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm" }, "Real-time on-chain data from the ", tokenInfo.name, " contract")), isConnected && /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      onClick: refreshBalance,
+      className: "px-4 py-2 rounded-xl text-xs font-medium text-white/70 hover:text-white transition-all",
+      style: { background: "rgba(17,19,42,0.6)", border: "1px solid rgba(124,58,237,0.2)" }
+    },
+    "\u21BB Refresh"
+  )), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" }, /* @__PURE__ */ React.createElement("div", { className: "glass-card p-6 neon-violet" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between mb-4" }, /* @__PURE__ */ React.createElement("span", { className: "text-xs font-medium text-white/40 uppercase tracking-wider" }, "Your Balance"), /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-10 h-10 rounded-xl flex items-center justify-center",
+      style: { background: "rgba(124,58,237,0.15)" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", stroke: "#7C3AED", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z", strokeLinecap: "round", strokeLinejoin: "round" }))
+  )), /* @__PURE__ */ React.createElement("div", { className: "text-3xl font-bold font-display mb-1" }, loadingData ? "\u2026" : displayBalance), /* @__PURE__ */ React.createElement("div", { className: "text-sm text-white/40" }, tokenInfo.symbol || "ADI")), /* @__PURE__ */ React.createElement("div", { className: "glass-card p-6 neon-blue" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between mb-4" }, /* @__PURE__ */ React.createElement("span", { className: "text-xs font-medium text-white/40 uppercase tracking-wider" }, "Total Supply"), /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-10 h-10 rounded-xl flex items-center justify-center",
+      style: { background: "rgba(59,130,246,0.15)" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", stroke: "#3B82F6", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M9 19c-5 0-8-3-8-7s3-7 8-7 8 3 8 7-3 7-8 7z M9 19c3 0 5-3 5-7s-2-7-5-7-5 3-5 7 2 7 5 7z", strokeLinecap: "round", strokeLinejoin: "round" }))
+  )), /* @__PURE__ */ React.createElement("div", { className: "text-3xl font-bold font-display mb-1" }, loadingData ? "\u2026" : displaySupply), /* @__PURE__ */ React.createElement("div", { className: "text-sm text-white/40" }, tokenInfo.symbol || "ADI", " Tokens")), /* @__PURE__ */ React.createElement("div", { className: "glass-card p-6", style: { boxShadow: "0 0 20px rgba(6,182,212,0.2)" } }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between mb-4" }, /* @__PURE__ */ React.createElement("span", { className: "text-xs font-medium text-white/40 uppercase tracking-wider" }, "Network"), /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-10 h-10 rounded-xl flex items-center justify-center",
+      style: { background: "rgba(6,182,212,0.15)" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", stroke: "#06B6D4", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M5 12h14m-7-7v14", strokeLinecap: "round", strokeLinejoin: "round" }), /* @__PURE__ */ React.createElement("circle", { cx: "12", cy: "12", r: "9", strokeLinecap: "round", strokeLinejoin: "round" }))
+  )), /* @__PURE__ */ React.createElement("div", { className: "text-xl font-bold font-display mb-1" }, isConnected ? networkName || "Connected" : "Not Connected"), /* @__PURE__ */ React.createElement("div", { className: "text-sm text-white/40" }, isConnected ? `Chain ID: ${chainId || "\u2014"}` : "Connect your wallet")), /* @__PURE__ */ React.createElement("div", { className: "glass-card p-6", style: { boxShadow: "0 0 20px rgba(124,58,237,0.15)" } }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between mb-4" }, /* @__PURE__ */ React.createElement("span", { className: "text-xs font-medium text-white/40 uppercase tracking-wider" }, "Contract"), /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-10 h-10 rounded-xl flex items-center justify-center",
+      style: { background: "rgba(124,58,237,0.15)" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", stroke: "#a78bfa", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71", strokeLinecap: "round", strokeLinejoin: "round" }))
+  )), /* @__PURE__ */ React.createElement("div", { className: "text-sm font-mono mb-2 break-all text-white/70" }, shortenAddr(contractAddr)), /* @__PURE__ */ React.createElement("div", { className: "flex gap-2" }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      onClick: handleCopy,
+      className: "text-xs px-3 py-1.5 rounded-lg transition-all hover:bg-white/5",
+      style: { background: "rgba(124,58,237,0.1)", border: "1px solid rgba(124,58,237,0.2)" }
+    },
+    copied ? "\u2713 Copied" : "Copy"
+  ), /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: `${explorerBase}/address/${contractAddr}`,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      className: "text-xs px-3 py-1.5 rounded-lg transition-all hover:bg-white/5",
+      style: { background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }
+    },
+    "Explorer \u2197"
+  )))))), /* @__PURE__ */ React.createElement(Section, { id: "send", className: "relative z-10 py-20 px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-2xl mx-auto" }, /* @__PURE__ */ React.createElement("div", { className: "text-center mb-8" }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-3xl font-bold mb-2" }, /* @__PURE__ */ React.createElement("span", { className: "gradient-text" }, "Send ADI")), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm" }, "Transfer ", tokenInfo.symbol, " tokens to any address")), /* @__PURE__ */ React.createElement("div", { className: "glass-card p-8 neon-violet" }, !isConnected ? /* @__PURE__ */ React.createElement("div", { className: "text-center py-12" }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center",
+      style: { background: "rgba(124,58,237,0.1)" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "32", height: "32", viewBox: "0 0 24 24", fill: "none", stroke: "#7C3AED", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z", strokeLinecap: "round", strokeLinejoin: "round" }))
+  ), /* @__PURE__ */ React.createElement("h3", { className: "text-xl font-semibold mb-2" }, "Connect Your Wallet"), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm mb-6" }, "Connect your wallet to start sending ", tokenInfo.symbol, " tokens"), /* @__PURE__ */ React.createElement("button", { onClick: connectWallet, disabled: connecting, className: "btn-gradient px-8 py-3 rounded-xl font-semibold text-white text-sm" }, connecting ? "Connecting\u2026" : "Connect Wallet")) : /* @__PURE__ */ React.createElement("form", { onSubmit: handleSend, className: "space-y-5" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("label", { className: "block text-xs font-medium text-white/50 uppercase tracking-wider mb-2" }, "Recipient Address"), /* @__PURE__ */ React.createElement(
+    "input",
+    {
+      type: "text",
+      placeholder: "0x\u2026",
+      value: sendForm.recipient,
+      onChange: (e) => setSendForm({ ...sendForm, recipient: e.target.value }),
+      className: "input-adi font-mono"
+    }
+  )), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between mb-2" }, /* @__PURE__ */ React.createElement("label", { className: "block text-xs font-medium text-white/50 uppercase tracking-wider" }, "Amount"), /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      type: "button",
+      onClick: handleMax,
+      className: "text-xs px-3 py-1 rounded-lg font-bold transition-all hover:scale-105",
+      style: { background: "linear-gradient(135deg, rgba(124,58,237,0.2), rgba(59,130,246,0.2))" }
+    },
+    "MAX"
+  )), /* @__PURE__ */ React.createElement("div", { className: "relative" }, /* @__PURE__ */ React.createElement(
+    "input",
+    {
+      type: "text",
+      inputMode: "decimal",
+      placeholder: "0.0",
+      value: sendForm.amount,
+      onChange: (e) => setSendForm({ ...sendForm, amount: e.target.value }),
+      className: "input-adi pr-16"
+    }
+  ), /* @__PURE__ */ React.createElement("span", { className: "absolute right-4 top-1/2 -translate-y-1/2 text-sm font-medium text-white/40" }, tokenInfo.symbol))), /* @__PURE__ */ React.createElement("div", { className: "flex items-center justify-between text-xs text-white/50 py-2 px-1" }, /* @__PURE__ */ React.createElement("span", null, "Available: ", /* @__PURE__ */ React.createElement("span", { className: "text-white/80 font-medium" }, displayBalance, " ", tokenInfo.symbol)), gasEstimate && /* @__PURE__ */ React.createElement("span", null, "Est. Gas: ", /* @__PURE__ */ React.createElement("span", { className: "text-white/80 font-medium" }, "\u2248 ", parseFloat(gasEstimate).toFixed(6), " ETH"))), sendStatus && /* @__PURE__ */ React.createElement("div", { className: "text-center text-sm py-2 px-4 rounded-xl", style: {
+    background: sendStatus === "success" ? "rgba(34,197,94,0.1)" : sendStatus === "pending" || sendStatus === "mining" ? "rgba(234,179,8,0.1)" : "rgba(239,68,68,0.1)"
+  } }, sendStatus === "pending" && "\u23F3 Preparing transaction\u2026", sendStatus === "mining" && "\u26CF\uFE0F Transaction mining\u2026", sendStatus === "success" && "\u2705 Transaction successful!", sendStatus === "error" && "\u274C Transaction failed"), /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      type: "submit",
+      disabled: sending || !sendForm.recipient || !sendForm.amount,
+      className: "btn-gradient w-full py-4 rounded-xl font-bold text-white text-base"
+    },
+    sending ? "Processing\u2026" : `Send ${tokenInfo.symbol}`
+  ))))), /* @__PURE__ */ React.createElement(Section, { id: "transactions", className: "relative z-10 py-20 px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-6xl mx-auto" }, /* @__PURE__ */ React.createElement("div", { className: "mb-8" }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-3xl font-bold mb-2" }, /* @__PURE__ */ React.createElement("span", { className: "gradient-text" }, "Transaction History")), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm" }, "Your recent ", tokenInfo.symbol, " transfers")), /* @__PURE__ */ React.createElement("div", { className: "glass-card overflow-hidden" }, txHistory.length === 0 ? /* @__PURE__ */ React.createElement("div", { className: "text-center py-16" }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center",
+      style: { background: "rgba(124,58,237,0.1)" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "32", height: "32", viewBox: "0 0 24 24", fill: "none", stroke: "#7C3AED", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2", strokeLinecap: "round", strokeLinejoin: "round" }))
+  ), /* @__PURE__ */ React.createElement("p", { className: "text-white/40 text-sm" }, "No transactions yet. Send some ", tokenInfo.symbol, " to see history here.")) : /* @__PURE__ */ React.createElement("div", { className: "overflow-x-auto" }, /* @__PURE__ */ React.createElement("table", { className: "w-full" }, /* @__PURE__ */ React.createElement("thead", null, /* @__PURE__ */ React.createElement("tr", { style: { borderBottom: "1px solid rgba(124,58,237,0.15)" } }, /* @__PURE__ */ React.createElement("th", { className: "text-left text-xs font-medium text-white/40 uppercase tracking-wider px-6 py-4" }, "Tx Hash"), /* @__PURE__ */ React.createElement("th", { className: "text-left text-xs font-medium text-white/40 uppercase tracking-wider px-6 py-4" }, "Date"), /* @__PURE__ */ React.createElement("th", { className: "text-left text-xs font-medium text-white/40 uppercase tracking-wider px-6 py-4" }, "Type"), /* @__PURE__ */ React.createElement("th", { className: "text-right text-xs font-medium text-white/40 uppercase tracking-wider px-6 py-4" }, "Amount"), /* @__PURE__ */ React.createElement("th", { className: "text-center text-xs font-medium text-white/40 uppercase tracking-wider px-6 py-4" }, "Status"))), /* @__PURE__ */ React.createElement("tbody", null, txHistory.map((tx) => /* @__PURE__ */ React.createElement("tr", { key: tx.id, className: "tx-row", style: { borderBottom: "1px solid rgba(255,255,255,0.03)" } }, /* @__PURE__ */ React.createElement("td", { className: "px-6 py-4" }, tx.hash !== "\u2014" ? /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: `${explorerBase}/tx/${tx.hash}`,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      className: "text-sm font-mono text-blue-400 hover:text-blue-300 transition-colors"
+    },
+    shortenAddr(tx.hash),
+    " \u2197"
+  ) : /* @__PURE__ */ React.createElement("span", { className: "text-sm text-white/30 font-mono" }, "Pending\u2026")), /* @__PURE__ */ React.createElement("td", { className: "px-6 py-4 text-sm text-white/50" }, tx.date), /* @__PURE__ */ React.createElement("td", { className: "px-6 py-4 text-sm text-white/70" }, tx.type), /* @__PURE__ */ React.createElement("td", { className: "px-6 py-4 text-right text-sm font-medium text-white" }, tx.amount, " ", tokenInfo.symbol), /* @__PURE__ */ React.createElement("td", { className: "px-6 py-4 text-center" }, /* @__PURE__ */ React.createElement("span", { className: `inline-block px-3 py-1 rounded-full text-xs font-medium ${tx.status === "success" ? "badge-success" : tx.status === "pending" ? "badge-pending" : "badge-failed"}` }, tx.status === "success" ? "Success" : tx.status === "pending" ? "Pending" : "Failed")))))))))), /* @__PURE__ */ React.createElement(Section, { id: "token-info", className: "relative z-10 py-20 px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-6xl mx-auto" }, /* @__PURE__ */ React.createElement("div", { className: "text-center mb-10" }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-3xl font-bold mb-2" }, /* @__PURE__ */ React.createElement("span", { className: "gradient-text" }, "Token Information")), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm" }, "Details about the ", tokenInfo.name, " (", tokenInfo.symbol, ") token")), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8" }, [
+    { label: "Name", value: tokenInfo.name, icon: "\u{1F4DD}" },
+    { label: "Symbol", value: tokenInfo.symbol, icon: "\u{1F3F7}\uFE0F" },
+    { label: "Network", value: "Polygon PoS", icon: "\u{1F517}" },
+    { label: "Standard", value: "ERC-20", icon: "\u{1F4CB}" },
+    { label: "Decimals", value: String(tokenInfo.decimals || 18), icon: "\u{1F522}" },
+    { label: "Supply Type", value: "Fixed", icon: "\u{1F512}" }
+  ].map((item, idx) => /* @__PURE__ */ React.createElement("div", { key: idx, className: "glass-card p-5 text-center" }, /* @__PURE__ */ React.createElement("div", { className: "text-2xl mb-3" }, item.icon), /* @__PURE__ */ React.createElement("div", { className: "text-xs text-white/40 uppercase tracking-wider mb-1" }, item.label), /* @__PURE__ */ React.createElement("div", { className: "text-sm font-semibold text-white truncate" }, item.value)))), /* @__PURE__ */ React.createElement("div", { className: "glass-card p-8 flex flex-col lg:flex-row items-center justify-between gap-6" }, /* @__PURE__ */ React.createElement("div", { className: "text-center lg:text-left" }, /* @__PURE__ */ React.createElement("h3", { className: "font-display text-xl font-bold mb-2" }, "Contract Address"), /* @__PURE__ */ React.createElement("p", { className: "text-sm font-mono text-white/60 break-all" }, contractAddr)), /* @__PURE__ */ React.createElement("div", { className: "flex gap-3 flex-wrap justify-center" }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      onClick: handleCopy,
+      className: "px-6 py-3 rounded-xl text-sm font-medium transition-all hover:scale-105",
+      style: { background: "rgba(124,58,237,0.1)", border: "1px solid rgba(124,58,237,0.3)" }
+    },
+    copied ? "\u2713 Copied!" : "Copy Address"
+  ), /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: `${explorerBase}/address/${contractAddr}`,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      className: "px-6 py-3 rounded-xl text-sm font-medium transition-all hover:scale-105",
+      style: { background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.3)" }
+    },
+    "View on PolygonScan \u2197"
+  ))))), /* @__PURE__ */ React.createElement(Section, { id: "about", className: "relative z-10 py-20 px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-6xl mx-auto" }, /* @__PURE__ */ React.createElement("div", { className: "text-center mb-12" }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-3xl font-bold mb-4" }, /* @__PURE__ */ React.createElement("span", { className: "gradient-text" }, "About ", appTitle)), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm max-w-2xl mx-auto" }, appTitle, " is an ERC-20 token built on the Polygon blockchain, offering fast, secure, and low-cost transactions for the decentralized future. Our platform empowers users with full control over their digital assets through transparent smart-contract technology.")), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6" }, /* @__PURE__ */ React.createElement("div", { className: "glass-card p-8 text-center neon-violet", style: { borderRadius: 20 } }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-16 h-16 mx-auto mb-5 rounded-2xl flex items-center justify-center",
+      style: { background: "linear-gradient(135deg, rgba(124,58,237,0.2), rgba(124,58,237,0.05))" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "32", height: "32", viewBox: "0 0 24 24", fill: "none", stroke: "#a78bfa", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", strokeLinecap: "round", strokeLinejoin: "round" }))
+  ), /* @__PURE__ */ React.createElement("h3", { className: "font-display text-lg font-bold mb-3" }, "Secure Transfers"), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm" }, "Every transaction is secured by Polygon's robust proof-of-stake consensus, ensuring your tokens are always safe and verifiable on-chain.")), /* @__PURE__ */ React.createElement("div", { className: "glass-card p-8 text-center neon-blue", style: { borderRadius: 20 } }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-16 h-16 mx-auto mb-5 rounded-2xl flex items-center justify-center",
+      style: { background: "linear-gradient(135deg, rgba(59,130,246,0.2), rgba(59,130,246,0.05))" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "32", height: "32", viewBox: "0 0 24 24", fill: "none", stroke: "#60a5fa", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5", strokeLinecap: "round", strokeLinejoin: "round" }))
+  ), /* @__PURE__ */ React.createElement("h3", { className: "font-display text-lg font-bold mb-3" }, "Polygon Blockchain"), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm" }, "Built on Polygon's high-performance Layer 2 network, ", appTitle, " delivers lightning-fast transactions with minimal gas fees and full Ethereum compatibility.")), /* @__PURE__ */ React.createElement("div", { className: "glass-card p-8 text-center", style: { borderRadius: 20, boxShadow: "0 0 20px rgba(6,182,212,0.2)" } }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-16 h-16 mx-auto mb-5 rounded-2xl flex items-center justify-center",
+      style: { background: "linear-gradient(135deg, rgba(6,182,212,0.2), rgba(6,182,212,0.05))" }
+    },
+    /* @__PURE__ */ React.createElement("svg", { width: "32", height: "32", viewBox: "0 0 24 24", fill: "none", stroke: "#22d3ee", strokeWidth: "2" }, /* @__PURE__ */ React.createElement("path", { d: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z", strokeLinecap: "round", strokeLinejoin: "round" }))
+  ), /* @__PURE__ */ React.createElement("h3", { className: "font-display text-lg font-bold mb-3" }, "Wallet Control"), /* @__PURE__ */ React.createElement("p", { className: "text-white/50 text-sm" }, "Your keys, your tokens. ", appTitle, " uses non-custodial wallet integration, meaning you always retain full control of your assets \u2014 no intermediaries required."))))), /* @__PURE__ */ React.createElement("footer", { className: "relative z-10 mt-20 py-12 px-4 sm:px-6 lg:px-8", style: { borderTop: "1px solid rgba(124,58,237,0.1)" } }, /* @__PURE__ */ React.createElement("div", { className: "max-w-7xl mx-auto" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-4 gap-8 mb-8" }, /* @__PURE__ */ React.createElement("div", { className: "md:col-span-2" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-3 mb-4" }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm",
+      style: {
+        background: "linear-gradient(135deg, #7C3AED, #3B82F6)",
+        boxShadow: "0 0 15px rgba(124,58,237,0.4)"
+      }
+    },
+    "ADI"
+  ), /* @__PURE__ */ React.createElement("span", { className: "font-display text-lg font-bold gradient-text" }, appTitle)), /* @__PURE__ */ React.createElement("p", { className: "text-white/40 text-sm max-w-md" }, "Your Digital Future. A premium ERC-20 token experience on the Polygon blockchain \u2014 fast, secure, and built for the decentralized economy.")), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h4", { className: "text-sm font-semibold text-white/70 mb-4" }, "Navigation"), /* @__PURE__ */ React.createElement("div", { className: "flex flex-col gap-2" }, [
+    { label: "Home", id: "home" },
+    { label: "Dashboard", id: "dashboard" },
+    { label: "Send ADI", id: "send" },
+    { label: "Transactions", id: "transactions" },
+    { label: "About", id: "about" }
+  ].map((link) => /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      key: link.id,
+      onClick: () => scrollToSection(link.id),
+      className: "text-sm text-white/40 hover:text-white transition-colors cursor-pointer"
+    },
+    link.label
+  )))), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h4", { className: "text-sm font-semibold text-white/70 mb-4" }, "Resources"), /* @__PURE__ */ React.createElement("div", { className: "flex flex-col gap-2" }, /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: `${explorerBase}/address/${contractAddr}`,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      className: "text-sm text-white/40 hover:text-white transition-colors"
+    },
+    "PolygonScan \u2197"
+  ), /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: "https://polygon.technology/",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      className: "text-sm text-white/40 hover:text-white transition-colors"
+    },
+    "Polygon Docs \u2197"
+  ), /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      href: "https://ethereum.org/en/developers/docs/standards/tokens/erc-20/",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      className: "text-sm text-white/40 hover:text-white transition-colors"
+    },
+    "ERC-20 Standard \u2197"
+  )))), /* @__PURE__ */ React.createElement("div", { className: "pt-8", style: { borderTop: "1px solid rgba(255,255,255,0.05)" } }, /* @__PURE__ */ React.createElement("p", { className: "text-xs text-white/30 text-center max-w-3xl mx-auto" }, "\u26A0\uFE0F Digital assets carry risk. ", appTitle, " (", tokenInfo.symbol, ') is a decentralized token on the Polygon blockchain. Always do your own research and never invest more than you can afford to lose. Transactions are irreversible. This application is provided "as is" without warranties of any kind.'), /* @__PURE__ */ React.createElement("p", { className: "text-xs text-white/20 text-center mt-4" }, "\xA9 ", (/* @__PURE__ */ new Date()).getFullYear(), " ", appTitle, ". Built on Polygon.")))));
+}
+
+// local:/src/index.css
+try {
+  const css = "/* ===== Global resets and base ===== */\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\nbody {\n  background: #090B1A;\n  color: #fff;\n  font-family: 'Inter', sans-serif;\n  overflow-x: hidden;\n}\n\n/* ===== Scrollbar ===== */\n::-webkit-scrollbar {\n  width: 8px;\n}\n::-webkit-scrollbar-track {\n  background: #0d0f24;\n}\n::-webkit-scrollbar-thumb {\n  background: linear-gradient(180deg, #7C3AED, #3B82F6);\n  border-radius: 4px;\n}\n::-webkit-scrollbar-thumb:hover {\n  background: linear-gradient(180deg, #8B5CF6, #60A5FA);\n}\n\n/* ===== Glassmorphism ===== */\n.glass-card {\n  background: rgba(17, 19, 42, 0.6);\n  backdrop-filter: blur(16px);\n  -webkit-backdrop-filter: blur(16px);\n  border: 1px solid rgba(124, 58, 237, 0.15);\n  border-radius: 20px;\n  transition: all 0.3s ease;\n}\n.glass-card:hover {\n  border-color: rgba(124, 58, 237, 0.4);\n  transform: translateY(-4px);\n  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.15);\n}\n\n/* ===== Gradient text ===== */\n.gradient-text {\n  background: linear-gradient(135deg, #7C3AED, #3B82F6, #06B6D4);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n\n/* ===== Gradient button ===== */\n.btn-gradient {\n  background: linear-gradient(135deg, #7C3AED, #3B82F6);\n  transition: all 0.3s ease;\n  position: relative;\n  overflow: hidden;\n}\n.btn-gradient::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: -100%;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);\n  transition: left 0.5s ease;\n}\n.btn-gradient:hover::before {\n  left: 100%;\n}\n.btn-gradient:hover {\n  box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);\n  transform: translateY(-2px);\n}\n.btn-gradient:active {\n  transform: translateY(0);\n}\n.btn-gradient:disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n  transform: none;\n}\n\n/* ===== Neon glow ===== */\n.neon-violet {\n  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3), inset 0 0 20px rgba(124, 58, 237, 0.05);\n}\n.neon-blue {\n  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.05);\n}\n\n/* ===== Background particles ===== */\n.particles-container {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n  z-index: 0;\n  overflow: hidden;\n}\n.particle {\n  position: absolute;\n  border-radius: 50%;\n  opacity: 0.3;\n}\n\n/* ===== 3D coin ===== */\n.coin-3d {\n  width: 180px;\n  height: 180px;\n  border-radius: 50%;\n  background: linear-gradient(145deg, #7C3AED, #5b21b6, #4c1d95);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 48px;\n  font-weight: 900;\n  color: #fff;\n  text-shadow: 0 2px 10px rgba(255,255,255,0.3);\n  box-shadow:\n    0 0 60px rgba(124, 58, 237, 0.4),\n    0 0 120px rgba(59, 130, 246, 0.2),\n    inset 0 -10px 30px rgba(0,0,0,0.3),\n    inset 0 10px 30px rgba(255,255,255,0.1);\n  position: relative;\n}\n.coin-ring {\n  position: absolute;\n  border-radius: 50%;\n  border: 2px solid;\n  pointer-events: none;\n}\n.coin-ring-1 {\n  width: 220px;\n  height: 220px;\n  border-color: rgba(124, 58, 237, 0.3);\n  animation: spin 20s linear infinite;\n}\n.coin-ring-2 {\n  width: 260px;\n  height: 260px;\n  border-color: rgba(59, 130, 246, 0.2);\n  border-style: dashed;\n  animation: spin 30s linear infinite reverse;\n}\n.coin-ring-3 {\n  width: 300px;\n  height: 300px;\n  border-color: rgba(6, 182, 212, 0.1);\n  animation: spin 40s linear infinite;\n}\n@keyframes spin {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n\n/* ===== Section reveal ===== */\n.section-reveal {\n  opacity: 0;\n  transform: translateY(30px);\n  transition: opacity 0.6s ease, transform 0.6s ease;\n}\n.section-reveal.visible {\n  opacity: 1;\n  transform: translateY(0);\n}\n\n/* ===== Table row hover ===== */\n.tx-row {\n  transition: all 0.2s ease;\n}\n.tx-row:hover {\n  background: rgba(124, 58, 237, 0.08);\n}\n\n/* ===== Status badges ===== */\n.badge-success {\n  background: rgba(34, 197, 94, 0.15);\n  color: #4ade80;\n  border: 1px solid rgba(34, 197, 94, 0.3);\n}\n.badge-pending {\n  background: rgba(234, 179, 8, 0.15);\n  color: #facc15;\n  border: 1px solid rgba(234, 179, 8, 0.3);\n}\n.badge-failed {\n  background: rgba(239, 68, 68, 0.15);\n  color: #f87171;\n  border: 1px solid rgba(239, 68, 68, 0.3);\n}\n\n/* ===== Input focus ===== */\n.input-adi {\n  background: rgba(9, 11, 26, 0.8);\n  border: 1px solid rgba(124, 58, 237, 0.2);\n  border-radius: 12px;\n  padding: 12px 16px;\n  color: #fff;\n  font-size: 14px;\n  transition: all 0.2s ease;\n  width: 100%;\n}\n.input-adi:focus {\n  outline: none;\n  border-color: #7C3AED;\n  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);\n}\n.input-adi::placeholder {\n  color: rgba(255,255,255,0.3);\n}\n\n/* ===== Mobile menu ===== */\n.mobile-menu {\n  max-height: 0;\n  overflow: hidden;\n  transition: max-height 0.3s ease;\n}\n.mobile-menu.open {\n  max-height: 500px;\n}\n\n/* ===== Toast ===== */\n.toast {\n  position: fixed;\n  bottom: 24px;\n  right: 24px;\n  z-index: 9999;\n  padding: 16px 24px;\n  border-radius: 12px;\n  font-size: 14px;\n  font-weight: 500;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  animation: slideUp 0.3s ease-out;\n  max-width: 400px;\n}\n.toast-success {\n  background: rgba(34, 197, 94, 0.15);\n  border: 1px solid rgba(34, 197, 94, 0.4);\n  color: #4ade80;\n  backdrop-filter: blur(12px);\n}\n.toast-error {\n  background: rgba(239, 68, 68, 0.15);\n  border: 1px solid rgba(239, 68, 68, 0.4);\n  color: #f87171;\n  backdrop-filter: blur(12px);\n}\n.toast-info {\n  background: rgba(59, 130, 246, 0.15);\n  border: 1px solid rgba(59, 130, 246, 0.4);\n  color: #60a5fa;\n  backdrop-filter: blur(12px);\n}\n\n@keyframes slideUp {\n  from { opacity: 0; transform: translateY(20px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n\n/* ===== Nav link ===== */\n.nav-link {\n  position: relative;\n  transition: color 0.2s ease;\n}\n.nav-link::after {\n  content: '';\n  position: absolute;\n  bottom: -4px;\n  left: 0;\n  width: 0;\n  height: 2px;\n  background: linear-gradient(90deg, #7C3AED, #3B82F6);\n  transition: width 0.3s ease;\n}\n.nav-link:hover::after {\n  width: 100%;\n}\n\n/* ===== Responsive ===== */\n@media (max-width: 768px) {\n  .coin-3d {\n    width: 120px;\n    height: 120px;\n    font-size: 32px;\n  }\n  .coin-ring-1 { width: 160px; height: 160px; }\n  .coin-ring-2 { width: 200px; height: 200px; }\n  .coin-ring-3 { width: 240px; height: 240px; }\n}\n";
+  if (typeof css === "string" && css.trim().length > 0) {
+    const style = document.createElement("style");
+    style.type = "text/css";
+    style.appendChild(document.createTextNode(css));
+    document.head.appendChild(style);
+  }
+} catch (e) {
+  console.error("Failed to inject CSS for /src/index.css", e);
+}
+
+// local:/src/main.jsx
+var root = createRoot(document.getElementById("root"));
+root.render(
+  /* @__PURE__ */ React2.createElement(React2.StrictMode, null, /* @__PURE__ */ React2.createElement(App, null))
+);
+
+</script>
+
+
+
+</body></html>
